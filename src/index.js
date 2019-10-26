@@ -88,11 +88,11 @@ export const int = val => {
 */
 
 export const float = val => {
-  if (falsy(val)) {
+  if (isFalsy(val)) {
     return 0.0;
   } else {
     const parsed = parseFloat(val);
-    if (falsy(parsed)) {
+    if (isFalsy(parsed)) {
       return 0.0;
     }
     return parsed;

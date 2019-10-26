@@ -21,7 +21,7 @@
   "scripts": {
     "build": "node_modules/babel-cli/bin/babel.js src --out-dir lib",
     "prepublish": "npm run build",
-    "test": "jest", 
+    "test": "jest --collect-coverage --verbose",
     "clearjest": "jest --clearCache"
   }
 }
