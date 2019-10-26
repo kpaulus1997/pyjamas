@@ -7,7 +7,7 @@
 
 export const isFalsy = val => {
   /**
-      Considered as falsy
+      Considered as falsy in python
       # null
       # false
       # undefined
@@ -35,20 +35,6 @@ export const isFalsy = val => {
     return true;
   }
 };
-// isFalsy(undefined)                            true
-// isFalsy('')                                   true
-// isFalsy({})                                   true
-// isFalsy([])                                   true
-// isFalsy([][0])                                true
-// isFalsy(() => [][0].name)                     true
-// isFalsy(NaN)                                  true
-
-// isFalsy('hi')                                 false
-// isFalsy(9)                                    false
-// isFalsy(0)                                    false
-// isFalsy({ none: 'none' })                     false
-// isFalsy(() => [{ name: 'hi' }][0].name)       false
-// isFalsy([].length)                            false
 
 /**
   |--------------------------------------------------
@@ -75,11 +61,6 @@ export const isEmpty = val => {
     return true;
   }
 };
-// isEmpty('Hi')                         false
-// isEmpty({ hi: 'hi })                  false
-// isEmpty([0,1,2])                      false
-
-// anything else                       true
 
 /**
   |--------------------------------------------------
@@ -94,6 +75,25 @@ export const int = val => {
     const parsed = parseInt(val, 10);
     if (isFalsy(parsed)) {
       return 0;
+    }
+    return parsed;
+  }
+};
+
+
+/**
+|--------------------------------------------------
+| Convert anything to a Float
+|--------------------------------------------------
+*/
+
+export const float = val => {
+  if (falsy(val)) {
+    return 0.0;
+  } else {
+    const parsed = parseFloat(val);
+    if (falsy(parsed)) {
+      return 0.0;
     }
     return parsed;
   }
@@ -172,21 +172,17 @@ export const range = (start, stop) => {
   return array;
 };
 
-// range(2)             [0, 1]
-// range(10).length     10
-// range(5, 10)         [5, 6, 7, 8, 9]
-
 /**
   |--------------------------------------------------
   | return the sum of an array
   |--------------------------------------------------
   */
 
-export const sum = val => {
+ export const sum = arr => {
   let ret = 0;
-  if (val instanceof Array) {
-    for (let i = 0; i < len(val); i++) {
-      if (isNumber(val)) ret += val;
+  if (arr instanceof Array) {
+    for (let i = 0; i < len(arr); i++) {
+      if (isNumber(arr[i])) ret += arr[i];
     }
   }
   return ret;
@@ -207,17 +203,3 @@ export const ifElseUndefined = (condition, val) => {
     return val;
   }
 };
-
-// ifElseUndefined({ hi: 'hi }, val))                 val
-// ifElseUndefined([0,1], val))                       val
-// ifElseUndefined('hi', val))                        val
-// ifElseUndefined(true, val))                        val
-// ifElseUndefined(6, val))                           val
-
-// ifElseUndefined([], val))                          undefined
-// ifElseUndefined({}, val))                          undefined
-// ifElseUndefined('', val))                          undefined
-// ifElseUndefined(undefined, val))                   undefined
-// ifElseUndefined(false, val))                       undefined
-// ifElseUndefined(NaN, val))                         undefined
-// ifElseUndefined(null, val))                        undefined

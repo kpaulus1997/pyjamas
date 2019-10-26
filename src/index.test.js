@@ -5,7 +5,12 @@ import {
   isEmpty,
   bool,
   range,
-  int
+  int,
+  isInt,
+  isFloat,
+  isNumber,
+  sum,
+  float
 } from "./index";
 // Defined
 const definedValuesLength = 2;
@@ -19,7 +24,6 @@ const emptyString = "";
 // Some Types
 const string = "hallo";
 const integer = 8;
-const float = 8.2;
 
 // len
 test("test len() with defined values", () => {
@@ -52,7 +56,7 @@ test("test isFalsy() with defined values", () => {
   expect(isFalsy(definedString)).toBe(false);
   expect(isFalsy(string)).toBe(false);
   expect(isFalsy(integer)).toBe(false);
-  expect(isFalsy(float)).toBe(false);
+  expect(isFalsy(8.2)).toBe(false);
   expect(isFalsy(true)).toBe(false);
   // special (definedObject has own property 'hello')
   expect(isFalsy(() => [definedObject][0].hello)).toBe(false);
@@ -92,7 +96,7 @@ test("test bool()", () => {
 
   expect(bool(0.0000000001)).toBe(true);
   expect(bool(integer)).toBe(true);
-  expect(bool(float)).toBe(true);
+  expect(bool(8.2)).toBe(true);
   expect(bool(true)).toBe(true);
 });
 
@@ -162,4 +166,73 @@ test("test int()", () => {
   expect(int(undefined)).toBe(0);
   expect(int(NaN)).toBe(0);
   expect(int(0)).toBe(0);
+});
+
+// isInt
+
+test("test isInt()", () => {
+  expect(isInt(1)).toBe(true);
+  expect(isInt(0)).toBe(true);
+  expect(isInt(2 / 2)).toBe(true);
+  expect(isInt(1.0)).toBe(true);
+
+  expect(isInt(2 / 1.5)).toBe(false);
+  expect(isInt(1.000000000001)).toBe(false);
+  expect(isInt("1")).toBe(false);
+  expect(isInt(NaN)).toBe(false);
+  expect(isInt(0.999999999999)).toBe(false);
+});
+
+// isFloat
+
+test("test isFloat()", () => {
+  expect(isFloat(1.1)).toBe(true);
+  expect(isFloat(0.000000001)).toBe(true);
+  expect(isFloat(2 / 2.1)).toBe(true);
+
+  expect(isFloat(1)).toBe(false);
+  expect(isFloat(0)).toBe(false);
+  expect(isFloat("1")).toBe(false);
+  expect(isFloat(NaN)).toBe(false);
+  expect(isFloat(undefined)).toBe(false);
+});
+
+// isNumber
+
+test("test isNumber()", () => {
+  expect(isNumber(1.1)).toBe(true);
+  expect(isNumber(0.000000001)).toBe(true);
+  expect(isNumber(2 / 2.1)).toBe(true);
+  expect(isNumber(1)).toBe(true);
+  expect(isNumber(0)).toBe(true);
+  expect(isNumber(2 / 2)).toBe(true);
+  expect(isNumber(1.0)).toBe(true);
+});
+
+// sum
+
+test("test sum()", () => {
+  expect(sum([1, 1])).toBe(2);
+  expect(sum([0.5, 0.5])).toBe(1);
+  expect(sum([1, null])).toBe(1);
+  expect(sum(undefined)).toBe(0);
+  expect(sum([null, NaN])).toBe(0);
+  expect(sum("Hi")).toBe(0);
+});
+
+// float
+
+test("test float()", () => {
+  // truthy
+  expect(float(1)).toBe(1.0);
+  expect(float("1.1")).toBe(1.1);
+  expect(float("1")).toBe(1.0);
+  expect(float("   1.2   ")).toBe(1.2);
+  expect(float("1.2 m")).toBe(1.2);
+  expect(float("NotaNumber")).toBe(0);
+
+  // falsy
+  expect(float(undefined)).toBe(0.0);
+  expect(float(NaN)).toBe(0.0);
+  expect(float(0)).toBe(0.0);
 });
