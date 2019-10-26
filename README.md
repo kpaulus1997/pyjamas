@@ -1,3 +1,20 @@
+1. [ Introduction. ](#intro)
+2. [ Installation. ](#instal)
+3. [ Example. ](#examp)
+4. [ Functions. ](#func)
+4.1 [ isFalsy. ](#isFalsy)
+4.2 [ isEmpty. ](#isEmpty)
+4.3 [ isInt. ](#isInt)
+4.4 [ isFloat. ](#isFloat)
+4.5 [ isNumber. ](#isNumber)
+4.6 [ bool. ](#bool)
+4.7 [ len. ](#len)
+4.8 [ sum. ](#sum)
+4.9 [ int. ](#int)
+4.10 [ float. ](#float)
+4.11 [ range. ](#range)
+
+<a name="intro"></a>
 # Pyjamas
 
 This package brings some Python beauty to JavaScript which especially includes typing utils that help you to get less exceptions and have more control of your codes functionallity. As you probably know, JS is dynamically typed which sometimes leads to unwanted behaviours, this package is trying to solve these problems with a new implementation of falsy values and typing utils. Here is a comparision:
@@ -20,6 +37,7 @@ Empty Objects: {}
 
 Functions that return falsy values: () => null
 
+<a name="instal"></a>
 ### Installation
 
 use
@@ -31,7 +49,7 @@ or
 ```
 npm install pyjamas
 ```
-
+<a name="examp"></a>
 ### Example
 
 Pyjamas ships with the isFalsy and bool function which is just an inverter of isFalsy
@@ -49,7 +67,8 @@ if(bool(undefined)) {
   // this won't execute because bool will convert undefined to false
 }
 ```
-
+<a name="func"></a>
+<a name="isFalsy"></a>
 ### isFalsy(value) 
 | Function                                  | Returns |
 | ----------------------------------------- |:-------:|
@@ -73,6 +92,7 @@ if(bool(undefined)) {
 
 Especially usefull is that you can check for a value in an array of objects for instance ```[][0].name``` howerver just putting it in isFalsy like: ```isFalsy([][0].name)``` would throw an exception, you need to write ```() =>``` in front of the value.
 
+<a name="isEmpty"></a>
 ### isEmpty(value)
 
 this function checks if a String | Array | Object is empty
@@ -85,6 +105,7 @@ this function checks if a String | Array | Object is empty
 
 ANYTHING else returns true
 
+<a name="isInt"></a>
 ### isInt(value)
 
 Check if the value is an Integer
@@ -102,6 +123,7 @@ Check if the value is an Integer
 | isInt(0.999999999999) | false   |
 
 
+<a name="isFloat"></a>
 ### isFloat(value)
 
 Check if the value is a Float
@@ -117,6 +139,7 @@ Check if the value is a Float
 | isFloat(NaN)          | false   |
 | isFloat(undefined)    | false   |
 
+<a name="isNumber"></a>
 ### isNumber(value)
 
 check if value is either an Interger or a Float
@@ -126,10 +149,12 @@ check if value is either an Interger or a Float
 
 Methods that parse the arguments into defined data structures
 
+<a name="bool"></a>
 ### bool(value)
 
 bool uses isFalsy to parse the incoming value into a boolean
 
+<a name="len"></a>
 ### len(value)
 
 get the length (Integer) of an Array | String | Object
@@ -148,6 +173,7 @@ get the length (Integer) of an Array | String | Object
 | len(null)               | -1      |
 
 
+<a name="sum"></a>
 ### sum(value)
 
 add all values inside an Array
@@ -162,7 +188,7 @@ add all values inside an Array
 | sum([null, NaN])   | 0       |
 | sum('Hi')          | 0       |
 
-
+<a name="int"></a>
 ### int(value)
 
 Trys to parse anything to an Integer, else returns 0
@@ -178,7 +204,7 @@ Trys to parse anything to an Integer, else returns 0
 | int(undefined)     | 0       |
 | int(NaN)           | 0       |
 
-
+<a name="float"></a>
 ### float(value)
 
 Trys to parse anything to a Float, else returns 0.0
@@ -194,7 +220,7 @@ Trys to parse anything to a Float, else returns 0.0
 | int(undefined)        | 0.0     |
 | int(NaN)              | 0.0     |
 
-
+<a name="range"></a>
 ### range(start: int, stop: int)
 
 generate an Array with start as the Integer to begin with and Stop as the Index to end with
