@@ -1,3 +1,5 @@
+# Pyjamas
+
 <!--ts-->
    * [ Introduction. ](#intro)
    * [ Installation. ](#instal)
@@ -16,8 +18,9 @@
       * [ range. ](#range)
 <!--te-->
 
+-----------
+
 <a name="intro"></a>
-# Pyjamas
 
 This package brings some Python beauty to JavaScript which especially includes typing utils that help you to get less exceptions and have more control of your codes functionallity. As you probably know, JS is dynamically typed which sometimes leads to unwanted behaviours, this package is trying to solve these problems with a new implementation of falsy values and typing utils. Here is a comparision:
 
