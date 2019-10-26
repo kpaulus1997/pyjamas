@@ -1,6 +1,6 @@
 {
   "name": "pyjamas",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "JS Utility Functions",
   "main": "lib/index.js",
   "repository": "https://github.com/kpaulus1997/pyjamas.git",
@@ -21,7 +21,19 @@
   "scripts": {
     "build": "node_modules/babel-cli/bin/babel.js src --out-dir lib",
     "prepublish": "npm run build",
-    "test": "jest --collect-coverage --verbose",
-    "clearjest": "jest --clearCache"
+    "test": "jest --verbose",
+    "clearjest": "jest --clearCache",
+    "testcoverage": "npm test -- --coverage",
+    "testbadges": "npm run testcoverage  && jest-coverage-badges"
+  },
+  "dependencies": {
+    "jest-coverage-badges": "^1.1.2"
+  },
+  "jest": {
+    "coverageReporters": [
+      "json-summary", 
+      "text",
+      "lcov"
+    ]
   }
 }

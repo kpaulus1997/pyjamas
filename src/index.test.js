@@ -1,4 +1,4 @@
-import {
+const {
   ifElseUndefined,
   len,
   isFalsy,
@@ -11,7 +11,7 @@ import {
   isNumber,
   sum,
   float
-} from "./index";
+} = require("./index");
 // Defined
 const definedValuesLength = 2;
 const definedObject = { hello: "hello", world: "world" };

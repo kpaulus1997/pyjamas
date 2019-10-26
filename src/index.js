@@ -5,7 +5,7 @@
 |--------------------------------------------------
 */
 
-export const isFalsy = val => {
+const isFalsy = val => {
   /**
       Considered as falsy in python
       # null
@@ -42,7 +42,7 @@ export const isFalsy = val => {
   |--------------------------------------------------
   */
 
-export const bool = val => !isFalsy(val);
+const bool = val => !isFalsy(val);
 
 /**
   |--------------------------------------------------
@@ -50,7 +50,7 @@ export const bool = val => !isFalsy(val);
   |--------------------------------------------------
   */
 
-export const isEmpty = val => {
+const isEmpty = val => {
   if (typeof val === "string") {
     return val.length === 0;
   } else if (typeof val === "object" && val != null) {
@@ -68,7 +68,7 @@ export const isEmpty = val => {
   |--------------------------------------------------
   */
 
-export const int = val => {
+const int = val => {
   if (isFalsy(val)) {
     return 0;
   } else {
@@ -80,14 +80,13 @@ export const int = val => {
   }
 };
 
-
 /**
 |--------------------------------------------------
 | Convert anything to a Float
 |--------------------------------------------------
 */
 
-export const float = val => {
+const float = val => {
   if (isFalsy(val)) {
     return 0.0;
   } else {
@@ -105,7 +104,7 @@ export const float = val => {
   |--------------------------------------------------
   */
 
-export const isFloat = val => {
+const isFloat = val => {
   return Number(val) === val && val % 1 !== 0;
 };
 
@@ -115,7 +114,7 @@ export const isFloat = val => {
   |--------------------------------------------------
   */
 
-export const isInt = val => {
+const isInt = val => {
   return Number(val) === val && val % 1 === 0;
 };
 
@@ -125,7 +124,7 @@ export const isInt = val => {
   |--------------------------------------------------
   */
 
-export const isNumber = val => {
+const isNumber = val => {
   return isFloat(val) || isInt(val);
 };
 
@@ -136,7 +135,7 @@ export const isNumber = val => {
   |--------------------------------------------------
   */
 
-export const len = val => {
+const len = val => {
   if (typeof val === "string") {
     return val.length;
   } else if (typeof val === "object" && val != null) {
@@ -155,7 +154,7 @@ export const len = val => {
   |--------------------------------------------------
   */
 
-export const range = (start, stop) => {
+const range = (start, stop) => {
   let _start;
   let _stop;
   if (isFalsy(stop)) {
@@ -178,7 +177,7 @@ export const range = (start, stop) => {
   |--------------------------------------------------
   */
 
- export const sum = arr => {
+const sum = arr => {
   let ret = 0;
   if (arr instanceof Array) {
     for (let i = 0; i < len(arr); i++) {
@@ -194,7 +193,7 @@ export const range = (start, stop) => {
   | workes like: if condition retrun value else return undefined
   |--------------------------------------------------
   */
-export const ifElseUndefined = (condition, val) => {
+const ifElseUndefined = (condition, val) => {
   if (typeof val === "function") {
     return val;
   } else if (isFalsy(condition)) {
@@ -202,4 +201,19 @@ export const ifElseUndefined = (condition, val) => {
   } else {
     return val;
   }
+};
+
+module.exports = {
+  isFalsy: isFalsy,
+  bool: bool,
+  int: int,
+  isEmpty: isEmpty,
+  float: float,
+  isFloat: isFloat,
+  isInt: isInt,
+  isNumber: isNumber,
+  len: len,
+  range: range,
+  sum: sum,
+  ifElseUndefined: ifElseUndefined
 };

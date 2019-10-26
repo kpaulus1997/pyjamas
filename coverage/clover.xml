@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1572108291130" clover="3.2.0">
-  <project timestamp="1572108291130" name="All files">
-    <metrics statements="148" coveredstatements="142" conditionals="104" coveredconditionals="98" methods="24" coveredmethods="24" elements="276" coveredelements="264" complexity="0" loc="148" ncloc="148" packages="2" files="2" classes="2"/>
+<coverage generated="1572110227714" clover="3.2.0">
+  <project timestamp="1572110227714" name="All files">
+    <metrics statements="150" coveredstatements="144" conditionals="104" coveredconditionals="98" methods="24" coveredmethods="24" elements="278" coveredelements="266" complexity="0" loc="150" ncloc="150" packages="2" files="2" classes="2"/>
     <package name="lib">
-      <metrics statements="74" coveredstatements="71" conditionals="52" coveredconditionals="49" methods="12" coveredmethods="12"/>
+      <metrics statements="75" coveredstatements="72" conditionals="52" coveredconditionals="49" methods="12" coveredmethods="12"/>
       <file name="index.js" path="/Users/Konstantin/Documents/application/pyjamas/lib/index.js">
-        <metrics statements="74" coveredstatements="71" conditionals="52" coveredconditionals="49" methods="12" coveredmethods="12"/>
+        <metrics statements="75" coveredstatements="72" conditionals="52" coveredconditionals="49" methods="12" coveredmethods="12"/>
         <line num="8" count="1" type="stmt"/>
         <line num="19" count="80" type="stmt"/>
         <line num="20" count="80" type="cond" truecount="2" falsecount="0"/>
@@ -80,12 +80,13 @@
         <line num="199" count="12" type="cond" truecount="2" falsecount="0"/>
         <line num="200" count="7" type="stmt"/>
         <line num="202" count="5" type="stmt"/>
+        <line num="206" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src">
-      <metrics statements="74" coveredstatements="71" conditionals="52" coveredconditionals="49" methods="12" coveredmethods="12"/>
+      <metrics statements="75" coveredstatements="72" conditionals="52" coveredconditionals="49" methods="12" coveredmethods="12"/>
       <file name="index.js" path="/Users/Konstantin/Documents/application/pyjamas/src/index.js">
-        <metrics statements="74" coveredstatements="71" conditionals="52" coveredconditionals="49" methods="12" coveredmethods="12"/>
+        <metrics statements="75" coveredstatements="72" conditionals="52" coveredconditionals="49" methods="12" coveredmethods="12"/>
         <line num="8" count="1" type="stmt"/>
         <line num="19" count="80" type="stmt"/>
         <line num="20" count="80" type="cond" truecount="2" falsecount="0"/>
@@ -117,49 +118,50 @@
         <line num="76" count="6" type="cond" truecount="2" falsecount="0"/>
         <line num="77" count="2" type="stmt"/>
         <line num="79" count="4" type="stmt"/>
-        <line num="90" count="1" type="stmt"/>
-        <line num="91" count="9" type="cond" truecount="2" falsecount="0"/>
-        <line num="92" count="3" type="stmt"/>
-        <line num="94" count="6" type="stmt"/>
-        <line num="95" count="6" type="cond" truecount="2" falsecount="0"/>
-        <line num="96" count="1" type="stmt"/>
-        <line num="98" count="5" type="stmt"/>
-        <line num="108" count="1" type="stmt"/>
-        <line num="109" count="23" type="cond" truecount="2" falsecount="0"/>
-        <line num="118" count="1" type="stmt"/>
-        <line num="119" count="19" type="cond" truecount="2" falsecount="0"/>
-        <line num="128" count="1" type="stmt"/>
-        <line num="129" count="15" type="cond" truecount="2" falsecount="0"/>
-        <line num="139" count="1" type="stmt"/>
-        <line num="140" count="26" type="cond" truecount="2" falsecount="0"/>
-        <line num="141" count="2" type="stmt"/>
-        <line num="142" count="24" type="cond" truecount="4" falsecount="0"/>
-        <line num="144" count="16" type="stmt"/>
-        <line num="145" count="8" type="cond" truecount="1" falsecount="1"/>
-        <line num="146" count="0" type="stmt"/>
-        <line num="148" count="8" type="stmt"/>
-        <line num="158" count="1" type="stmt"/>
-        <line num="161" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="89" count="1" type="stmt"/>
+        <line num="90" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="91" count="3" type="stmt"/>
+        <line num="93" count="6" type="stmt"/>
+        <line num="94" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="95" count="1" type="stmt"/>
+        <line num="97" count="5" type="stmt"/>
+        <line num="107" count="1" type="stmt"/>
+        <line num="108" count="23" type="cond" truecount="2" falsecount="0"/>
+        <line num="117" count="1" type="stmt"/>
+        <line num="118" count="19" type="cond" truecount="2" falsecount="0"/>
+        <line num="127" count="1" type="stmt"/>
+        <line num="128" count="15" type="cond" truecount="2" falsecount="0"/>
+        <line num="138" count="1" type="stmt"/>
+        <line num="139" count="26" type="cond" truecount="2" falsecount="0"/>
+        <line num="140" count="2" type="stmt"/>
+        <line num="141" count="24" type="cond" truecount="4" falsecount="0"/>
+        <line num="143" count="16" type="stmt"/>
+        <line num="144" count="8" type="cond" truecount="1" falsecount="1"/>
+        <line num="145" count="0" type="stmt"/>
+        <line num="147" count="8" type="stmt"/>
+        <line num="157" count="1" type="stmt"/>
+        <line num="160" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="161" count="2" type="stmt"/>
         <line num="162" count="2" type="stmt"/>
-        <line num="163" count="2" type="stmt"/>
+        <line num="164" count="3" type="stmt"/>
         <line num="165" count="3" type="stmt"/>
-        <line num="166" count="3" type="stmt"/>
+        <line num="167" count="5" type="stmt"/>
         <line num="168" count="5" type="stmt"/>
-        <line num="169" count="5" type="stmt"/>
-        <line num="170" count="27" type="stmt"/>
-        <line num="172" count="5" type="stmt"/>
-        <line num="181" count="1" type="stmt"/>
-        <line num="182" count="6" type="stmt"/>
-        <line num="183" count="6" type="cond" truecount="2" falsecount="0"/>
-        <line num="184" count="4" type="stmt"/>
-        <line num="185" count="8" type="cond" truecount="2" falsecount="0"/>
-        <line num="188" count="6" type="stmt"/>
-        <line num="197" count="1" type="stmt"/>
-        <line num="198" count="12" type="cond" truecount="1" falsecount="1"/>
-        <line num="199" count="0" type="stmt"/>
-        <line num="200" count="12" type="cond" truecount="2" falsecount="0"/>
-        <line num="201" count="7" type="stmt"/>
-        <line num="203" count="5" type="stmt"/>
+        <line num="169" count="27" type="stmt"/>
+        <line num="171" count="5" type="stmt"/>
+        <line num="180" count="1" type="stmt"/>
+        <line num="181" count="6" type="stmt"/>
+        <line num="182" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="183" count="4" type="stmt"/>
+        <line num="184" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="187" count="6" type="stmt"/>
+        <line num="196" count="1" type="stmt"/>
+        <line num="197" count="12" type="cond" truecount="1" falsecount="1"/>
+        <line num="198" count="0" type="stmt"/>
+        <line num="199" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="200" count="7" type="stmt"/>
+        <line num="202" count="5" type="stmt"/>
+        <line num="206" count="1" type="stmt"/>
       </file>
     </package>
   </project>
