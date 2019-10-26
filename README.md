@@ -32,7 +32,7 @@ or
 npm install pyjamas
 ```
 
-### Examples
+### Example
 
 Pyjamas ships with the isFalsy and bool function which is just an inverter of isFalsy
 
@@ -50,7 +50,7 @@ if(bool(undefined)) {
 }
 ```
 
-#### isFalsy(value) 
+### isFalsy(value) 
 | Function                                  | Returns |
 | ----------------------------------------- |:-------:|
 | isFalsy(undefined)                        | true    |
@@ -73,7 +73,7 @@ if(bool(undefined)) {
 
 Especially usefull is that you can check for a value in an array of objects for instance ```[][0].name``` howerver just putting it in isFalsy like: ```isFalsy([][0].name)``` would throw an exception, you need to write ```() =>``` in front of the value.
 
-#### isEmpty(value)
+### isEmpty(value)
 
 this function checks if a String | Array | Object is empty
 
@@ -85,7 +85,7 @@ this function checks if a String | Array | Object is empty
 
 ANYTHING else returns true
 
-#### isInt(value)
+### isInt(value)
 
 Check if the value is an Integer
 
@@ -102,7 +102,7 @@ Check if the value is an Integer
 | isInt(0.999999999999) | false   |
 
 
-#### isFloat(value)
+### isFloat(value)
 
 Check if the value is a Float
 
@@ -117,20 +117,20 @@ Check if the value is a Float
 | isFloat(NaN)          | false   |
 | isFloat(undefined)    | false   |
 
-#### isNumber(value)
+### isNumber(value)
 
 check if value is either an Interger or a Float
 
 
-### Converters
+## Converters
 
 Methods that parse the arguments into defined data structures
 
-#### bool(value)
+### bool(value)
 
 bool uses isFalsy to parse the incoming value into a boolean
 
-#### len(value)
+### len(value)
 
 get the length (Integer) of an Array | String | Object
 
@@ -148,7 +148,7 @@ get the length (Integer) of an Array | String | Object
 | len(null)               | -1      |
 
 
-#### sum(value)
+### sum(value)
 
 add all values inside an Array
 
@@ -163,7 +163,7 @@ add all values inside an Array
 | sum('Hi')          | 0       |
 
 
-#### int(value)
+### int(value)
 
 Trys to parse anything to an Integer, else returns 0
 
@@ -179,7 +179,7 @@ Trys to parse anything to an Integer, else returns 0
 | int(NaN)           | 0       |
 
 
-#### float(value)
+### float(value)
 
 Trys to parse anything to a Float, else returns 0.0
 
@@ -195,7 +195,7 @@ Trys to parse anything to a Float, else returns 0.0
 | int(NaN)              | 0.0     |
 
 
-#### range(start: int, stop: int)
+### range(start: int, stop: int)
 
 generate an Array with start as the Integer to begin with and Stop as the Index to end with
 
