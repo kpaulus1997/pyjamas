@@ -793,6 +793,11 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
+"@olavoparno/jest-badges-readme@^1.3.7":
+  version "1.3.7"
+  resolved "https://registry.yarnpkg.com/@olavoparno/jest-badges-readme/-/jest-badges-readme-1.3.7.tgz#9b6fc9a3943d844bb915f5274354e659f0a0a1ef"
+  integrity sha512-ZsR1UC8HwuXQOFxhPao0bu0jSWZeyhH+RPwBS2b1VDtBWXVAd7R+LYYWbnJjw7F5mEVu+I3IkgcSaPfGBSRuCg==
+
 "@types/babel__core@^7.1.0":
   version "7.1.3"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.3.tgz#e441ea7df63cd080dfcd02ab199e6d16a735fc30"
@@ -2950,13 +2955,6 @@ jest-config@^24.9.0:
     pretty-format "^24.9.0"
     realpath-native "^1.1.0"
 
-jest-coverage-badges@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/jest-coverage-badges/-/jest-coverage-badges-1.1.2.tgz#a70786b139fd8fb685db732e1e2d916d8a47287e"
-  integrity sha512-44A7i2xR6os8+fWk8ZRM6W4fKiD2jwKOLU9eB3iTIIWACd9RbdvmiCNpQZTOsUBhKvz7aQ/ASFhu5JOEhWUOlg==
-  dependencies:
-    mkdirp "0.5.1"
-
 jest-diff@^24.9.0:
   version "24.9.0"
   resolved "https://registry.yarnpkg.com/jest-diff/-/jest-diff-24.9.0.tgz#931b7d0d5778a1baf7452cb816e325e3724055da"
@@ -3599,7 +3597,7 @@ mixin-deep@^1.2.0:
     for-in "^1.0.2"
     is-extendable "^1.0.1"
 
-mkdirp@0.5.1, mkdirp@^0.5.0, mkdirp@^0.5.1:
+mkdirp@^0.5.0, mkdirp@^0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   integrity sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=

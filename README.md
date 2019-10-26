@@ -1,3 +1,7 @@
+| Build | Statements | Branches | Functions | Lines | Built By | We Love |
+| ------ | ------ | ------- | ------- | ------ | -------| ------- |
+| ![BuildStatus](#buildstatus#) | ![Statements](#statements# "Make me better!") | ![Branches](#branches# "Make me better!") | ![Functions](#functions# "Make me better!") | ![Lines](#lines# "Make me better!") | ![BuiltBy](https://img.shields.io/badge/TypeScript-Lovers-black.svg "img.shields.io") | ![ForTheBadge](https://img.shields.io/badge/Using-Badges-red.svg "ForTheBadge")
+
 # Pyjamas
 
 This package brings some Python beauty to JavaScript which especially includes typing utils that help you to get less exceptions and have more control of your codes functionallity. As you probably know, JS is dynamically typed which sometimes leads to unwanted behaviours, this package is trying to solve these problems with a new implementation of falsy values and typing utils. Here is a comparision:

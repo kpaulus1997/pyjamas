@@ -1,15 +1,26 @@
 {
   "name": "pyjamas",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "JS Utility Functions",
   "main": "lib/index.js",
   "repository": "https://github.com/kpaulus1997/pyjamas.git",
   "author": "Konstantin Paulus",
   "license": "MIT",
+  "keywords": [
+    "utils",
+    "helper",
+    "falsy",
+    "truthy",
+    "boolean",
+    "array",
+    "range",
+    "type"
+  ],
   "private": false,
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
+    "@olavoparno/jest-badges-readme": "^1.3.7",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-jest": "^24.9.0",
@@ -20,20 +31,21 @@
   },
   "scripts": {
     "build": "node_modules/babel-cli/bin/babel.js src --out-dir lib",
+    "prebuild": "echo false > .buildstatus",
+    "postbuild": "echo true > .buildstatus",
     "prepublish": "npm run build",
     "test": "jest --verbose",
+    "test:coverage": "jest --coverage",
     "clearjest": "jest --clearCache",
-    "testcoverage": "npm test -- --coverage",
-    "testbadges": "npm run testcoverage  && jest-coverage-badges"
-  },
-  "dependencies": {
-    "jest-coverage-badges": "^1.1.2"
+    "make-badges": "node_modules/.bin/jest-badges-readme",
+    "make-readme": "npm run test:coverage && npm run make-badges"
   },
   "jest": {
     "coverageReporters": [
-      "json-summary", 
+      "json-summary",
       "text",
       "lcov"
-    ]
+    ],
+    "collectCoverage": true
   }
 }
