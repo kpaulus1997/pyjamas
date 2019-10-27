@@ -10,7 +10,8 @@ const {
   isFloat,
   isNumber,
   sum,
-  float
+  float,
+  isString
 } = require("./index");
 // Defined
 const definedValuesLength = 2;
@@ -214,10 +215,26 @@ test("test isNumber()", () => {
 test("test sum()", () => {
   expect(sum([1, 1])).toBe(2);
   expect(sum([0.5, 0.5])).toBe(1);
+  expect(sum([{ a: 0.5 }, { a: 0.5 }], "a")).toBe(1);
   expect(sum([1, null])).toBe(1);
+  expect(sum([{ a: 1 }, { a: null }], "a")).toBe(1);
   expect(sum(undefined)).toBe(0);
+  expect(sum([{ a: 1 }], "b")).toBe(0);
+  expect(sum([{ a: 1 }])).toBe(0);
   expect(sum([null, NaN])).toBe(0);
   expect(sum("Hi")).toBe(0);
+});
+
+
+// isString
+
+test("test isString()", () => {
+  expect(isString('')).toBe(true);
+  expect(isString('String')).toBe(true);
+  expect(isString(undefined)).toBe(false);
+  expect(isString(null)).toBe(false);
+  expect(isString(0)).toBe(false);
+  expect(isString([][0])).toBe(false);
 });
 
 // float

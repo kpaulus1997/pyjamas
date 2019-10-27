@@ -11,20 +11,22 @@
       * [ isInt. ](#isInt)
       * [ isFloat. ](#isFloat)
       * [ isNumber. ](#isNumber)
+      * [ isString. ](#isString)
       * [ bool. ](#bool)
       * [ sum. ](#sum)
       * [ int. ](#int)
       * [ len. ](#len)
       * [ range. ](#range)
+   * [ Testing. ](#test)
 <!--te-->
 
 -----------
 
 <a name="intro"></a>
 
-This package brings some Python beauty to JavaScript which especially includes typing utils that help you to get less exceptions and have more control of your codes functionallity. As you probably know, JS is dynamically typed which sometimes leads to unwanted behaviours, this package is trying to solve these problems with a new implementation of falsy values and typing utils. Here is a comparision:
+This package brings some Python beauty to JavaScript, which mostly includes typing utils that help you get less exceptions and have more control of your codes functionality. As you probably know, JS is dynamically typed which sometimes leads to unwanted behaviours, this package is trying to solve these problems with a new implementation of falsy values and typing utils. Here is a comparision:
 
-#### These values will JavaScript make bypass the if blocks
+#### These values will make bypass the if blocks in JavaScript
 ```javascript
 if (false)
 if (undefined)
@@ -35,13 +37,16 @@ if (NaN)
 if ('')
 ```
 #### Now Pyjamas extends these values and also consideres the following values as falsy
+```
+// Empty Arrays
+[]
 
-Empty Arrays: []
+// Empty Objects
+{}
 
-Empty Objects: {}
-
-Functions that return falsy values: () => null
-
+// Functions that return falsy values or throw an exception
+() => null
+```
 <a name="instal"></a>
 ### Installation
 
@@ -149,6 +154,17 @@ Check if the value is a Float
 
 check if value is either an Interger or a Float
 
+<a name="isString"></a>
+### isString(value)
+
+check if value is a String
+
+| Function            | Returns |
+| ------------------- |:-------:|
+| isString('')        | true    |
+| isString('String')  | true    |
+| isString(undefined) | false   |
+| isString(null)      | false   |
 
 ## Converters
 
@@ -235,3 +251,9 @@ generate an Array with start as the Integer to begin with and Stop as the Index 
 | range(2)          | [0, 1]          |
 | range(10).length  | 10              |
 | range(5, 10)      | [5, 6, 7, 8, 9] |
+
+
+<a name="test"></a>
+## Testing
+
+This package is heavily tested and tries to cover every possible scenario with unit test, in case you should find something we didn't thought about please contact us. We are much obliged for your help.

@@ -135,6 +135,20 @@ const isNumber = val => {
   |--------------------------------------------------
   */
 
+const isString = val => {
+  if (isFalsy(val) && val !== "") {
+    return false;
+  }
+  return typeof val === "string" || val instanceof String;
+};
+
+/**
+  |--------------------------------------------------
+  | Get the length of an array, object or string
+  | anything else returns -1
+  |--------------------------------------------------
+  */
+
 const len = val => {
   if (typeof val === "string") {
     return val.length;
@@ -177,11 +191,15 @@ const range = (start, stop) => {
   |--------------------------------------------------
   */
 
-const sum = arr => {
+const sum = (arr, key) => {
   let ret = 0;
   if (arr instanceof Array) {
     for (let i = 0; i < len(arr); i++) {
-      if (isNumber(arr[i])) ret += arr[i];
+      if (isString(key)) {
+        if (isNumber(arr[i][key])) ret += arr[i][key];
+      } else {
+        if (isNumber(arr[i])) ret += arr[i];
+      }
     }
   }
   return ret;
@@ -204,16 +222,17 @@ const ifElseUndefined = (condition, val) => {
 };
 
 module.exports = {
-  isFalsy: isFalsy,
-  bool: bool,
   int: int,
-  isEmpty: isEmpty,
-  float: float,
-  isFloat: isFloat,
-  isInt: isInt,
-  isNumber: isNumber,
   len: len,
-  range: range,
   sum: sum,
+  bool: bool,
+  range: range,
+  float: float,
+  isInt: isInt,
+  isFalsy: isFalsy,
+  isEmpty: isEmpty,
+  isFloat: isFloat,
+  isNumber: isNumber,
+  isString: isString,
   ifElseUndefined: ifElseUndefined
 };
