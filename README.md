@@ -64,7 +64,7 @@ npm install pyjamas
 Pyjamas ships with the isFalsy and bool function which is just an inverter of isFalsy
 
 ```javascript
-# ES6
+// ES6
 
 import { isFalsy, bool } from 'pyjamas'
 
